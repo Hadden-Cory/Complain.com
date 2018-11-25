@@ -150,22 +150,30 @@ function didComplaintChanged() {
 
 /**********************************
  * STORE COMPLAINT
- * Saves complaint to local storage  
+ * Saves complaint to local 
+ * storage.  
  * *******************************/
-function storeComplaint(complaint){
-alert("start");
-if (typeof(Storage) !== "undefined") {
-  alert("if");
-  var timestamp = Date();
-  alert(timestamp);
-  localStorage.setItem(timestamp, complaint);
-  alert("stored");
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
-alert("10-4");
+function storeComplaint(complaint) {
+  if (typeof (Storage) !== "undefined") {
+    var timestamp = Date();
+    localStorage.setItem(timestamp, complaint);
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
 }
 
+/**********************************
+ * RETRIEVE COMPLAINT
+ * Pulls a complaint from local 
+ * storage.  
+ * *******************************/
+function retrieveComplaint(time) {
+  if (typeof (Storage) !== "undefined") {
+    return localStorage.getItem(time);
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
+}
 
 /*********************************
  * SELECT MESSAGE
@@ -223,11 +231,11 @@ function cgiFace() {
   ctx.stroke();
 }
 
-function clearCanvas(){
+function clearCanvas() {
   var canvas = document.getElementById("smileyFace");
   var ctx = canvas.getContext("2d")
 
   ctx.fillStyle = "#FFFFFF";
-  ctx.fillRect(-10,-10,8000,8000);
+  ctx.fillRect(-10, -10, 8000, 8000);
 
 }

@@ -302,13 +302,13 @@ img{
         transform: rotateZ(0deg) rotateY(0deg);
     }
     4%{
-        transform: rotateZ(30deg) rotateX(-20deg) scale(.8);
+        transform: rotateZ(30deg) rotateX(-20deg) scale(.6);
     }    
     8%{
-        transform: rotateZ(-30deg) rotateX(-40deg) scale(.7);
+        transform: rotateZ(-30deg) rotateX(-40deg) scale(.5);
     }
     12%{
-        transform: rotateZ(30deg) rotateX(-60deg) scale(.5);
+        transform: rotateZ(30deg) rotateX(-60deg) scale(.4);
     }
     16%{
         transform: rotateZ(-30deg) rotateX(-50deg) scale(.2);
