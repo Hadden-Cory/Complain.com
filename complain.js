@@ -175,6 +175,20 @@ function retrieveComplaint(time) {
   }
 }
 
+function loadThreeComplaints() {
+  if (typeof (Storage) !== "undefined") {
+  for (var i = 0; i < 3 && I <= localStorage.length; i++){
+    var lcKey = localStorage.key(i);
+    var lcItem = localStorage.getItem(lcKey);
+    document.getElementById("history").innerHTML = "<p>"+lcItem+"</P><p>"+lcKey+"</p>";
+  }
+
+
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
+}
+
 /*********************************
  * SELECT MESSAGE
  * Randomly choses a validation 
