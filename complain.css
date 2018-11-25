@@ -30,6 +30,21 @@ h1{
     float: left;
 }
 
+
+.listView{
+    background-color: #fff9a6;
+    z-index: 0;
+    margin: auto;
+    height: 85%;
+    min-height: 564px;
+    width: 70%;
+    min-width: 520px;
+    padding: 1%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    float: left;
+}
+
 #mainVentArea{
     background-color: #fff9a6;
     z-index: 0;
@@ -339,6 +354,23 @@ img{
     box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.2);
 }
 
+#history{
+    position: relative;
+    float: left;
+    margin: auto;
+    padding: 10px;
+    height: 85%;
+    min-height: 564px;
+    width: 98%;
+    min-width: 520px;
+    background: #fff9a6;
+}
+
+#history p{
+    position: sticky;
+    text-align: left;
+
+}
 /* .flip{
     background-color: #d0f70c;
     animation-name: flip;

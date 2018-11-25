@@ -50,7 +50,6 @@ function validateUser() {
   if (!complaintSent) { //If we haven't yet sent a complaint.
 
     storeComplaint(complaint);
-    alert(53);
     setTimeout(function () { //
       makeValidatersVisible();
       refreshValidaters();
@@ -58,7 +57,6 @@ function validateUser() {
 
   } else if (didComplaintChanged()) { //If the user updated the complaint.
     storeComplaint(complaint);
-    alert(61);
     setTimeout(function () {
       refreshValidaters()
     }, 3500);
@@ -177,10 +175,22 @@ function retrieveComplaint(time) {
 
 function loadThreeComplaints() {
   if (typeof (Storage) !== "undefined") {
-  for (var i = 0; i < 3 && I <= localStorage.length; i++){
-    var lcKey = localStorage.key(i);
+  for (var i = 0; i < 3; i++){
+
+    var selection = Math.floor(Math.random() * localStorage.length);
+    var lcKey = localStorage.key(selection);
     var lcItem = localStorage.getItem(lcKey);
-    document.getElementById("history").innerHTML = "<p>"+lcItem+"</P><p>"+lcKey+"</p>";
+    
+    var pTag = document.createElement("P");
+    var tNode = document.createTextNode(lcItem);
+    pTag.appendChild(tNode);
+    document.getElementById("history").appendChild(pTag);
+    tNode = document.createTextNode("--Complained: ");
+    pTag.appendChild(tNode);
+    document.getElementById("history").appendChild(pTag);
+    tNode = document.createTextNode(lcKey);
+    pTag.appendChild(tNode);
+    document.getElementById("history").appendChild(pTag);
   }
 
 
