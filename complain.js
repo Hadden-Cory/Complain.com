@@ -200,3 +200,12 @@ function cgiFace() {
   ctx.arc(x, (y + 5), smileSize, 0, 1 * Math.PI);
   ctx.stroke();
 }
+
+function clearCanvas(){
+  var canvas = document.getElementById("smileyFace");
+  var ctx = canvas.getContext("2d")
+
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(-10,-10,8000,8000);
+  
+}
