@@ -49,13 +49,16 @@ function validateUser() {
   //---------------------------------------------------------------> JS Conditional
   if (!complaintSent) { //If we haven't yet sent a complaint.
 
+    storeComplaint(complaint);
+    alert(53);
     setTimeout(function () { //
       makeValidatersVisible();
-      refreshValidaters()
+      refreshValidaters();
     }, 3500);
 
   } else if (didComplaintChanged()) { //If the user updated the complaint.
-
+    storeComplaint(complaint);
+    alert(61);
     setTimeout(function () {
       refreshValidaters()
     }, 3500);
@@ -64,7 +67,7 @@ function validateUser() {
   } else { //If there the complaint is still the same but the user still wants validation.
     refreshValidaters()
   }
-  lastComplaint = document.getElementById("complaint").value;
+  lastComplaint = complaint;
 }
 
 
@@ -145,6 +148,25 @@ function didComplaintChanged() {
   return complaintIsChanged;
 }
 
+/**********************************
+ * STORE COMPLAINT
+ * Saves complaint to local storage  
+ * *******************************/
+function storeComplaint(complaint){
+alert("start");
+if (typeof(Storage) !== "undefined") {
+  alert("if");
+  var timestamp = Date();
+  alert(timestamp);
+  localStorage.setItem(timestamp, complaint);
+  alert("stored");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+alert("10-4");
+}
+
+
 /*********************************
  * SELECT MESSAGE
  * Randomly choses a validation 
@@ -207,5 +229,5 @@ function clearCanvas(){
 
   ctx.fillStyle = "#FFFFFF";
   ctx.fillRect(-10,-10,8000,8000);
-  
+
 }
