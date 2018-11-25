@@ -7,7 +7,7 @@
   <script src="complain.js"></script>
 </head>
 
-<body>  
+<body>
 
   <div id="secondaryContainment">
     <div class="mainArea">
@@ -26,31 +26,33 @@
             </div>
           </div>
         </div>
-        <div id="logo">
-          <h1>Complain.com</h1>
-        </div>
+        <a href="index.html">
+          <div id="logo">
+            <h1>Complain.com</h1>
+          </div>
+        </a>
       </div>
       <div id="drawing">
         <!---------------------------------------------------------------Canvas Tag-->
         <canvas id="smileyFace" width="700" height="300"></canvas>
         <ul>
-            <li><a class="active" onclick="smileyFaceDraw('classicSmile')" href="#smile1">Classic Smile</a></li>
-            <li><a class="active" onclick="smileyFaceDraw('threeDSmile')" href="#smile1">3D Smile</a></li>
-            <li><a class="active" onclick="smileyFaceDraw('transparentSmile')" href="#smile1">Empty Smile</a></li>
-            <li><a class="active" onclick="smileyFaceDraw('sidewaysSmile')" href="#smile1">Sideways Smile</a></li>
-            <li><a class="active" onclick="smileyFaceDraw('laughingSmile')" href="#smile1">Lauging Smile</a></li>
-            <li><a class="active" onclick="smileyFaceDraw('greenSmile')" href="#smile1">Green Smile</a></li>
-            <li><a class="active" onclick="cgiFace()" href="#smile1">CGI Smile</a></li>
+          <li><a class="active" onclick="smileyFaceDraw('classicSmile')" href="#smile1">Classic Smile</a></li>
+          <li><a class="active" onclick="smileyFaceDraw('threeDSmile')" href="#smile1">3D Smile</a></li>
+          <li><a class="active" onclick="smileyFaceDraw('transparentSmile')" href="#smile1">Empty Smile</a></li>
+          <li><a class="active" onclick="smileyFaceDraw('sidewaysSmile')" href="#smile1">Sideways Smile</a></li>
+          <li><a class="active" onclick="smileyFaceDraw('laughingSmile')" href="#smile1">Lauging Smile</a></li>
+          <li><a class="active" onclick="smileyFaceDraw('greenSmile')" href="#smile1">Green Smile</a></li>
+          <li><a class="active" onclick="cgiFace()" href="#smile1">CGI Smile</a></li>
 
         </ul>
-            <br>
-            <!--------------------------------------------------------------Events-->
+        <br>
+        <!--------------------------------------------------------------Events-->
         <button id="btn_vent" ontouchstart, onclick="clearCanvas()">
-            <h2 id="btn_vent_text">Clear</h2>
-          </button>
+          <h2 id="btn_vent_text">Clear</h2>
+        </button>
       </div>
     </div>
-    <div id="imageLoader" class="collasped" >
+    <div id="imageLoader" class="collasped">
       <img id="threeDSmile" src="smiles/smile_1.png" alt="smile" height="50" width="50">
       <img id="transparentSmile" src="smiles/smile_2.png" alt="smile" height="50" width="50">
       <img id="sidewaysSmile" src="smiles/smile_3.png" alt="smile" height="50" width="50">

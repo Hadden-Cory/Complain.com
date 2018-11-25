@@ -5,6 +5,10 @@ body {
     height: 100%;
 }
 
+h1{
+    color: #000000;
+}
+
 #secondaryContainment{
     width: 1461px;
     height: 100%;
