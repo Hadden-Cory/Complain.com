@@ -163,23 +163,16 @@ function selectMessage() {
  * *******************************/
 //---------------------------------------------------------------> JS Parameter
 function smileyFaceDraw(face) {
-  alert(face);
-  var canvas = document.getElementById("smileyFace");
-  var ctx = canvas.getContext("2d")
-  alert(smileArray[face]);
 
+  var canvas = document.getElementById("smileyFace");
+  var ctx = canvas.getContext("2d");
   var x = 50 + Math.floor(Math.random() * 600);
   var y = 50 + Math.floor(Math.random() * 200);
 
   var img = document.getElementById(face);
-    alert(img);
   ctx.drawImage(img, x, y);
-
 }
 
-function loadImg(value, index) {
-  document.getElementById("imageLoader").innerHTML = "<img id='" + index + "scr='" + value + "' alt='smile' height='50' width='50'></img>";
-}
 
 function cgiFace() {
   var canvas = document.getElementById("smileyFace");
